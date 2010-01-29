@@ -1,0 +1,7 @@
+sinatra
+data_mapper --version 0.10.2
+dm-core --version 0.10.2
+dm-validations --version 0.10.2
+dm-timestamps --version 0.10.2
+rack-flash
+httparty

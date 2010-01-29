@@ -1,0 +1,40 @@
+!!!
+%html
+  %head
+    %title Running Tracker
+    %link{:rel => "stylesheet", :href => "/styles.css", :media => "screen,projection", :type => "text/css"}    
+  %body
+    - if flash[:message]
+      .flash
+        = flash[:message]
+    %h1 Running Tracker
+
+    %form{:method => :post, :action => "/"}
+      %label{:name => :distance} I ran
+      %input#distance{:type => :text, :name => :distance}
+      miles
+      %label{:name => :time} in
+      %input#time{:type => :text, :name => :time}
+      minutes
+      %label{:name => :norun} (or I didn't run 
+      %input#time{:type => :checkbox, :name => :norun}
+      today)
+      %input.submit{:type => :submit, :value => "Add"}
+      
+    %table
+      %thead
+        %tr
+          %th Date
+          %th Distance
+          %th Time
+      %tbody
+        - @records.each do |r|
+          - if r.norun
+            %tr.norun
+              %td #{r.date_f}
+              %td{:colspan => "2"} No run
+          - else
+            %tr
+              %td #{r.date_f}
+              %td #{r.distance}
+              %td #{r.time}

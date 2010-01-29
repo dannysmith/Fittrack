@@ -1,0 +1,55 @@
+body {
+  font-family: Verdana, Helvetica, Arial;
+  font-size: 14px; 
+}
+
+h1 {
+  font-family: serif;
+  font-weight: normal;
+  font-size: 2em;
+  margin-bottom: 1em;
+  border-bottom: 1px solid #C2C8D2;
+  width: 100%;
+}
+
+.flash {
+  background: #E8E8E8;
+  font-size: 1.2em;
+  padding: 5px 10px 5px 10px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+input[type="text"] {
+  color: #575555;
+  background: #fff;
+  width: 80px;
+  font-size: 1.2em;
+}
+
+table {
+  background: #C2C8D2;
+  border: 1px solid #C2C8D2;
+  padding: 1px;
+  margin-top: 2em;
+  margin-bottom: 3em;
+  text-align: center;
+  width: 400px;
+}
+
+tbody {
+  background: #fff;
+}
+
+th {
+  font-weight: normal;
+}
+
+td {
+  padding: 5px;
+  margin: 0;
+}
+
+tr.norun {
+  color: #920C0F;
+}
